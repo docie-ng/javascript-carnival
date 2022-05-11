@@ -19,19 +19,18 @@ unicornArray[2].src = './images/unicorn-2.png'
 unicornArray[3] = new Image()
 unicornArray[3].src = './images/unicorn-3.png'
 
-// console.log(unicornArray)
-
 let images = document.getElementsByClassName('inflate-an-image')
+let number = [0]
+let popup = 'Unicorn' + number
 
 for (let i = 0; i < images.length; i++) {
   images[i].onclick = changeImage
 }
 
-// CLICKING THE TILES
+// CLICKING THE UNICORNS
 
 function changeImage(e) {
   let images = e.target
-  // console.log('i clicked on: ' + images)
   for (let i = 0; i < unicornArray.length; i++) {
     if (unicornArray[i].src === images.src) {
       i++
@@ -40,5 +39,7 @@ function changeImage(e) {
       }
     }
   }
+  if (unicornArray[3].src === images.src)
+    alert('Woo hoo ' + (popup + number++) + ' says thanks!')
 }
-console.log(changeImage)
+// console.log(changeImage)
