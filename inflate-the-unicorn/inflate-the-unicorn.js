@@ -21,15 +21,22 @@ unicornArray[3].src = './images/unicorn-3.png'
 
 // console.log(unicornArray)
 
-// // calling on the image when click happens //
+let images = document.getElementsByClassName('inflate-an-image')
 
-function changeImage() {
-  let nextImage = document.getElementById('unicorn1')
+for (let i = 0; i < images.length; i++) {
+  images[i].onclick = changeImage
+}
+
+// CLICKING THE TILES
+
+function changeImage(e) {
+  let images = e.target
+  // console.log('i clicked on: ' + images)
   for (let i = 0; i < unicornArray.length; i++) {
-    if (unicornArray[i].src === nextImage.src) {
+    if (unicornArray[i].src === images.src) {
       i++
-      if ((document.getElementById('unicorn1').src = unicornArray[0].src)) {
-        document.getElementById('unicorn1').src = unicornArray[i++].src
+      if ((images.src = unicornArray[0].src)) {
+        images.src = unicornArray[i++].src
       }
     }
   }
