@@ -5,21 +5,22 @@
 console.log('Whack-a-Mole!')
 
 let holes = document.getElementsByTagName('TD')
-
-// for (let i = 0; i < holes.length; i++) {
-//   holes[i].onclick = whack
-// }
-// // checking for clicks
-// function whack(e) {
-//   let holes = e.target
-//   console.log('whack ')
-// }
+let img = document.createElement('img')
+img.classList.add('mole')
+img.src = 'mole.PNG'
+img.onclick = whackedMole
 
 // Randomly put the mole inside
 
 function putMoleinHole() {
   let randomIndex = Math.floor(Math.random() * 24)
-  let holes = holes[randomIndex]
-  console.log(randomIndex)
+  let randomCell = holes[randomIndex]
+
+  randomCell.appendChild(img)
 }
 putMoleinHole()
+
+function whackedMole() {
+  img.remove(img)
+  putMoleinHole()
+}
