@@ -10,6 +10,9 @@ img.classList.add('mole')
 img.src = 'mole.PNG'
 img.onclick = whackedMole
 
+var audio = new Audio()
+audio.src = 'whack-audio.wav'
+
 // Randomly put the mole inside
 
 function putMoleinHole() {
@@ -22,5 +25,6 @@ putMoleinHole()
 
 function whackedMole() {
   img.remove(img)
+  audio.play()
   putMoleinHole()
 }
