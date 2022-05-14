@@ -39,7 +39,7 @@ function changeImage(e) {
       }
     }
   }
-  if (unicornArray[3].src === images.src)
+  if (images.src === unicornArray[3].src) {
     alert('Woo hoo ' + (popup + number++) + ' says thanks!')
+  }
 }
-// console.log(changeImage)
