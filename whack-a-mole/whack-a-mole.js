@@ -24,7 +24,7 @@ function putMoleinHole() {
 putMoleinHole()
 
 function whackedMole() {
-  img.remove(img)
   audio.play()
+  img.remove(img)
   putMoleinHole()
 }
