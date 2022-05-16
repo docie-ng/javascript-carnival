@@ -16,7 +16,7 @@ audio.src = 'whack-audio.wav'
 // Randomly put the mole inside
 
 function putMoleinHole() {
-  let randomIndex = Math.floor(Math.random() * 24)
+  let randomIndex = Math.floor(Math.random() * 25)
   let randomCell = holes[randomIndex]
 
   randomCell.appendChild(img)
